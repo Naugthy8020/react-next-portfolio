@@ -17,7 +17,7 @@ export default function NewsList({ news }: Props) {
     <ul>
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
-          <Link href={"/news/${aricle.id"} className={styles.link}>
+          <Link href={`/news/${article.id}`} className={styles.link}>
             {article.thumbnail ? (
               <Image
                 src={article.thumbnail.url}

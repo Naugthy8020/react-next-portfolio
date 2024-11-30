@@ -1,4 +1,4 @@
-import Sheet from "@/app/_components/sheet";
+import Sheet from "@/app/_components/Sheet";
 import Hero from "@/app/_components/Hero";
 
 type Props = {
