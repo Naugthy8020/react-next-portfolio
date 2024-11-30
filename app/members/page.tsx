@@ -1,45 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-const data = {
-  contents: [
-    {
-      id: "1",
-      image: {
-        url: "/img-member1.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "ディビット・チャン",
-      position: "CEO",
-      profile: "ああああああああああああああ",
-    },
-    {
-      id: "2",
-      image: {
-        url: "/img-member1.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "ディビット・チャン",
-      position: "CEO",
-      profile: "ああああああああああああああ",
-    },
-    {
-      id: "3",
-      image: {
-        url: "/img-member1.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "ディビット・チャン",
-      position: "CEO",
-      profile: "ああああああああああああああ",
-    },
-  ],
-};
+import { getMembersList } from "../_libs/microcms";
+import { MEMBERS_LIST__LIMIT } from "@/app/_constants";
 
-export default function Page() {
+export default async function Page() {
+  const data = await getMembersList({ limit: MEMBERS_LIST__LIMIT });
   return (
     <div className={styles.container}>
       {data.contents.length === 0 ? (
