@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
-import { getNewsList } from "@/app/_libs/microcms";
 import NewsList from "@/app/_components/NewsList";
 import Pagination from "@/app/_components/Pagination";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
 import { get } from "http";
+import { getCategoryDetail, getNewsList } from "@/app/_libs/microcms";
 
 type Props = {
   params: {
+    id: string;
     current: string;
   };
 };
