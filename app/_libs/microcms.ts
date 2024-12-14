@@ -12,8 +12,7 @@ export type Member = {
   image: MicroCMSImage;
 } & MicroCMSListContent;
 
-
-export type Caterory = {
+export type Category = {
   name: string;
 } & MicroCMSListContent;
 
@@ -24,7 +23,6 @@ export type News = {
   thumbnail?: MicroCMSImage;
   category: AudioContextLatencyCategory;
 } & MicroCMSListContent;
-
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -40,8 +38,7 @@ const client = createClient({
 });
 
 export const getMembersList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-  .getList<Member>({
+  const listData = await client.getList<Member>({
     endpoint: "members",
     queries,
   });
@@ -49,10 +46,33 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
 };
 
 export const getNewsList = async (queries?: MicroCMSQueries) => {
-  const listDate = await client
-  .getList<News>({
+  const listDate = await client.getList<News>({
     endpoint: "news",
     queries,
   });
   return listDate;
+};
+
+export const getNewsDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<News>({
+    endpoint: "news",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
+export const getCategoryDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Category>({
+    endpoint: "categories",
+    contentId,
+    queries,
+  });
+  return detailData;
 };
