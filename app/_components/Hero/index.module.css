@@ -25,7 +25,7 @@
 }
 
 .sub::before {
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   width: 20px;
@@ -33,7 +33,7 @@
 }
 
 .sub::after {
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   width: 20px;
