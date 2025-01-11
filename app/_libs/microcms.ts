@@ -50,6 +50,8 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
     endpoint: 'news',
     queries,
   });
+  console.log(listData.contents.map(news => news.category)
+  )
   return listData;
 };
 
