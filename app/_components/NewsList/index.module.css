@@ -1,10 +1,19 @@
 .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   border-bottom: 1px solid var(--color-border-light);
 }
 .list:last-child {
   border-bottom: none;
 }
 
+.item {
+  width: calc((100% - 48px) / 3);
+}
 .link {
   display: flex;
   align-items: flex-start;

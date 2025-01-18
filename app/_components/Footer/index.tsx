@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from './index.module.css';
+import Link from "next/link";
+import styles from "./index.module.css";
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
             <Link href="/news">ニュース</Link>
           </li>
           <li className={styles.item}>
-            <Link href="/members">メンバー</Link>
+            <Link href="/skills">メンバー</Link>
           </li>
           <li className={styles.item}>
             <Link href="/contact">お問い合わせ</Link>
