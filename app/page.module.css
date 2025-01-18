@@ -1,15 +1,34 @@
+/* 背景画像を固定 */
+
+
+
+.bgimg {
+  position: fixed; /* 背景画像を画面に固定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像が画面全体にフィット */
+  z-index: -1; /* 背景画像を最背面に配置 */
+  background-attachment: fixed; /* 背景をスクロールしても固定 */
+}
+
+/* .top セクション */
 .top {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* 背景に透明度を追加 */
   color: #fff;
   overflow: hidden;
-  padding: 200px 0;
+  padding: 100px 0;
+  z-index: 1; /* コンテンツが背景の上に表示されるように */
 }
 
 .title {
+  color: #fff;
+  margin-top: 3rem;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -17,27 +36,39 @@
 }
 
 .description {
+  color: #fff;
   text-align: center;
 }
+
+/* .details セクション */
 .details {
   text-align: center;
   color: #fff;
+  padding: 100px 0; /* セクションに上下のパディングを追加 */
 }
 
-.bgimg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right;
+.detailsist {
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: -1;
+  gap: 200px;
 }
 
+.detailsist > * {
+  position: relative;
+}
+
+.detailsist > *:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: #333;
+}
+
+/* .news セクション */
 .news {
   position: relative;
   background-color: #fff;
@@ -57,32 +88,27 @@
   bottom: -40px;
 }
 
+/* メディアクエリ: 640px 以下の画面幅対応 */
 @media (max-width: 640px) {
   .top {
     padding: 120px 16px;
   }
+
   .title {
     font-size: 2rem;
     text-align: left;
   }
 
   .description {
-    text-align: center;
     font-size: 0.9rem;
     text-align: left;
   }
 
   .bgimg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: 600px;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
+    object-position: center center;
   }
 
   .news {

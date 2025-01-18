@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-
+import Hero from "@/app/_components/Hero";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
@@ -14,14 +14,7 @@ export default async function Home() {
   });
   return (
     <>
-      <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>田村　優典</h1>
-          <p className={styles.description}>
-            私は京都デザイン＆テクノロジー専門学校に在学している学生です。
-          </p>
-        </div>
-      </section>
+      
       <Image
         className={styles.bgimg}
         src="/aurora.jpg"
@@ -31,13 +24,84 @@ export default async function Home() {
         priority
         sizes="100vw"
       />
-      <p className={styles.details}>
+
+
+
+      <Hero title="My-portfolio" sub="ポートフォリオ" /> 
+      
+
+      <div>
+          <h1 className={styles.title}>田村　優典</h1>
+          <p className={styles.description}>
+            私は京都デザイン＆テクノロジー専門学校に在学している学生です。
+          </p>
+        </div>
+      <ul className={styles.detailsist}> 
+        <li className={styles.details}>
         田村優典
         <br />
         京都デザインアンドテクノロジー専門学校在籍
         <br />
         日本人
-      </p>
+      </li>
+
+      <li className={styles.details}>
+        Yusuke Tamura
+        <br />
+        kyoto-design＆technology　college
+        <br />
+        Im japanese
+      </li>
+      </ul>
+
+      <div>
+          <h1 className={styles.title}>田村　優典</h1>
+          <p className={styles.description}>
+            私は京都デザイン＆テクノロジー専門学校に在学している学生です。
+          </p>
+        </div>
+      <ul className={styles.detailsist}> 
+        <li className={styles.details}>
+        田村優典
+        <br />
+        京都デザインアンドテクノロジー専門学校在籍
+        <br />
+        日本人
+      </li>
+
+      <li className={styles.details}>
+        Yusuke Tamura
+        <br />
+        kyoto-design＆technology　college
+        <br />
+        Im japanese
+      </li>
+      </ul>
+
+      <div>
+          <h1 className={styles.title}>田村　優典</h1>
+          <p className={styles.description}>
+            私は京都デザイン＆テクノロジー専門学校に在学している学生です。
+          </p>
+        </div>
+      <ul className={styles.detailsist}> 
+        <li className={styles.details}>
+        田村優典
+        <br />
+        京都デザインアンドテクノロジー専門学校在籍
+        <br />
+        日本人
+      </li>
+
+      <li className={styles.details}>
+        Yusuke Tamura
+        <br />
+        kyoto-design＆technology　college
+        <br />
+        Im japanese
+      </li>
+      </ul>
+     
     </>
   );
 }

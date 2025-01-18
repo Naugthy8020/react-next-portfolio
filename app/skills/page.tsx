@@ -7,6 +7,15 @@ export default async function Page() {
   const data = await skillsList({ limit: SKIllS_LIST_LIMIT });
   return (
     <div className={styles.container}>
+      {/* 背景画像としてのImageコンポーネント */}
+      <Image
+        className={styles.bgimg}
+        src="/aurora.jpg"
+        alt="背景画像"
+        width={4000}
+        height={1200}
+      />
+
       {data.contents.length === 0 ? (
         <p className={styles.empty}>メンバーが登録されていません。</p>
       ) : (
