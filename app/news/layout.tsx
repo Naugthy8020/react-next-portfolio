@@ -15,7 +15,7 @@ export default function NewsLayout({ children }: Props) {
   return (
     <>
       <Hero title="My-production" sub="制作物" />
-      <Sheet>{children}</Sheet>
+      {children}
     </>
   );
 }

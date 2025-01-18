@@ -6,25 +6,45 @@
   padding: 0;
   list-style: none;
   border-bottom: 1px solid var(--color-border-light);
+  max-width: 1080px;
+  margin: auto;
 }
 .list:last-child {
   border-bottom: none;
 }
+.link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.link:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .item {
   width: calc((100% - 48px) / 3);
+  transition: transform 0.2s ease-in-out;
 }
 .link {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 40px;
-  padding: 24px 0;
+  padding: 24px;
+  background: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
 }
 
 .image {
-  width: 200px;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
   height: auto;
   border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .title {
