@@ -1,16 +1,16 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Hero from "@/app/_components/Hero";
-import { getNewsList } from "@/app/_libs/microcms";
-import { TOP_NEWS_LIMIT } from "@/app/_constants";
-import NewsList from "@/app/_components/NewsList";
+import { getBlogList } from "@/app/_libs/microcms";
+import { TOP_BLOG_LIMIT } from "@/app/_constants";
+import BlogList from "@/app/_components/BlogList";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 60;
 
 export default async function Home() {
-  const data = await getNewsList({
-    limit: TOP_NEWS_LIMIT,
+  const data = await getBlogList({
+    limit: TOP_BLOG_LIMIT,
   });
   return (
     <>

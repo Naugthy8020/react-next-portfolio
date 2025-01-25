@@ -15,7 +15,7 @@ export type Category = {
   name: string;
 } & MicroCMSListContent;
 
-export type News = {
+export type Blog = {
   title: string;
   description: string;
   content: string;
@@ -44,20 +44,20 @@ export const skillsList = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-export const getNewsList = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<News>({
+export const getBlogList = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Blog>({
     endpoint: "blogs",
     queries,
   });
-  console.log(listData.contents.map((news) => news.category));
+  console.log(listData.contents.map((blog) => blog.category));
   return listData;
 };
 
-export const getNewsDetail = async (
+export const getBlogDetail = async (
   contentId: string,
   queries?: MicroCMSQueries
 ) => {
-  const detailData = await client.getListDetail<News>({
+  const detailData = await client.getListDetail<Blog>({
     endpoint: "blogs",
     contentId,
     queries,
@@ -84,8 +84,8 @@ export const getCategoryDetail = async (
   return detailData;
 };
 
-export const getAllNewsList = async () => {
-  const listData = await client.getAllContents<News>({
+export const getAllBlogList = async () => {
+  const listData = await client.getAllContents<Blog>({
     endpoint: "blogs",
   });
 

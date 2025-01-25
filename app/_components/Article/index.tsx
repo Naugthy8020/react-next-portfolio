@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import type { News } from '@/app/_libs/microcms';
-import Date from '../Date';
-import Category from '../Category';
-import styles from './index.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import type { Blog } from "@/app/_libs/microcms";
+import Date from "../Date";
+import Category from "../Category";
+import styles from "./index.module.css";
 
 type Props = {
-  data: News;
+  data: Blog;
 };
 
 export default function Article({ data }: Props) {
@@ -16,7 +16,7 @@ export default function Article({ data }: Props) {
       <p className={styles.description}>{data.description}</p>
       <div className={styles.meta}>
         <Link
-          href={`/news/category/${data.category.id}`}
+          href={`/blog/category/${data.category.id}`}
           className={styles.categoryLink}
         >
           <Category category={data.category} />
