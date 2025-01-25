@@ -5,6 +5,7 @@ import SearchField from "@/app/_components/SearchField";
 import { BLOG_LIST_LIMIT } from "@/app/_constants";
 import Image from "next/image";
 import styles from "@/app/blog/page.module.css";
+import Hero from "../_components/Hero";
 
 export default async function Page() {
   const { contents: blog, totalCount } = await getBlogList({
@@ -13,6 +14,7 @@ export default async function Page() {
 
   return (
     <>
+      <Hero title="My-production" sub="制作物" />
       <Image
         className={styles.bgimg}
         src="/aurora.jpg"
