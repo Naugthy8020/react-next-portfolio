@@ -1,9 +1,10 @@
 .container {
   position: relative;
-  width: 840px;
+  width: 1240px;
   margin: -40px auto 0;
   padding: 80px;
   border-radius: 8px;
+  margin-top: 3rem;
 }
 
 @media (max-width: 920px) {

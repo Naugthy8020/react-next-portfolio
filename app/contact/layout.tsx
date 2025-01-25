@@ -1,8 +1,8 @@
-import Hero from '@/app/_components/Hero';
-import Sheet from '@/app/_components/Sheet';
+import Hero from "@/app/_components/Hero";
+import Sheet from "@/app/_components/_Sheet";
 
 export const metadata = {
-  title: 'お問い合わせ',
+  title: "お問い合わせ",
 };
 
 type Props = {

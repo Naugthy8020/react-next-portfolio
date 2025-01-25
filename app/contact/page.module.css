@@ -6,8 +6,6 @@
 
 /* 背景画像を固定 */
 
-
-
 .bgimg {
   position: fixed; /* 背景画像を画面に固定 */
   top: 0;
@@ -40,7 +38,6 @@
   text-align: center;
   margin-bottom: 1rem;
 }
-
 
 /* メディアクエリ: 640px 以下の画面幅対応 */
 @media (max-width: 640px) {
@@ -77,7 +74,6 @@
     margin-top: 16px;
   }
 }
-
 
 @media (max-width: 640px) {
   .text {

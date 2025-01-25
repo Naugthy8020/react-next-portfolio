@@ -14,12 +14,12 @@
 }
 .link:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(237, 236, 236, 0.15);
 }
 
 .link:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(246, 245, 245, 0.1);
 }
 
 .item {
@@ -32,9 +32,9 @@
   justify-content: flex-start;
   gap: 40px;
   padding: 24px;
-  background: var(--color-background);
+  background-color: #01010185;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(238, 238, 238, 0.1);
   transition: all 0.2s ease-in-out;
 }
 
@@ -51,12 +51,14 @@
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .meta {
   display: flex;
   align-items: center;
   gap: 16px;
+  color: #fff;
 }
 
 @media (max-width: 640px) {

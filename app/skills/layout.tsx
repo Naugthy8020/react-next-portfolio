@@ -1,5 +1,5 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Sheet from "@/app/_components/Sheet";
+import Sheet from "@/app/_components/_Sheet";
 import Hero from "@/app/_components/Hero";
 
 export const metadata = {

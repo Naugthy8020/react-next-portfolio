@@ -1,5 +1,5 @@
 import Hero from "@/app/_components/Hero";
-import Sheet from "@/app/_components/Sheet";
+import Sheet from "@/app/_components/_Sheet";
 
 export const metadata = {
   title: "ニュース",
