@@ -26,13 +26,16 @@
 }
 
 .image {
-  width: 240px;
-  height: auto;
+  width: 100%; /* 幅を親要素に合わせる */
+  min-height: 140;
+  max-width: 230px; /* 最大幅を240pxに制限 */
+  height: 220px;
+  object-fit: cover; /* 画像が枠にフィットするようにトリミング */
   border-radius: var(--border-radius);
 }
 
 .name {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
 }
@@ -42,7 +45,7 @@
 }
 
 .profile {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: #fff;
 }
 
