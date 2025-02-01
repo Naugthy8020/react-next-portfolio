@@ -24,7 +24,7 @@ export default async function Page() {
         priority
         sizes="100vw"
       />
-      <SearchField />
+   
       <BlogList blog={blog} />
       <Pagination totalCount={totalCount} />
     </>

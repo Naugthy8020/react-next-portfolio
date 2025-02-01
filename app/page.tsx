@@ -25,67 +25,25 @@ export default async function Home() {
       />
 
       <Hero title="My-portfolio" sub="ポートフォリオ" />
+      <div className={styles.profileContainer}>
+  <img src="/my-icon.png" alt="My Icon" className={styles.profileImage} />
+  <div className={styles.profileText}>
+    <h1 className={styles.title}>田村　優典</h1>
+    <p className={styles.description}>
+      私は京都デザイン＆テクノロジー専門学校に在学している学生です。
+      <br />学年１年生です。
+      <br />専攻スーパーITエンジニア専攻です。
+      <br />
+      Yusuke Tamura
+      <br />
+      kyoto-design＆technology　college
+      <br />
+      Im japanese
+    </p>
+  </div>
+</div>
 
-      <div>
-        <h1 className={styles.title}>田村　優典</h1>
-        <p className={styles.description}>
-          私は京都デザイン＆テクノロジー専門学校に在学している学生です。
-        </p>
-      </div>
-      <ul className={styles.detailsist}>
-        <li className={styles.details}>
-          田村優典
-          <br />
-          京都デザインアンドテクノロジー専門学校在籍
-          <br />
-          日本人
-        </li>
-
-        <li className={styles.details}>
-          Yusuke Tamura
-          <br />
-          kyoto-design＆technology　college
-          <br />
-          Im japanese
-        </li>
-      </ul>
-
-      <div></div>
-      <ul className={styles.detailsist}>
-        <li className={styles.details}>
-          田村優典
-          <br />
-          京都デザインアンドテクノロジー専門学校在籍
-          <br />
-          日本人
-        </li>
-
-        <li className={styles.details}>
-          Yusuke Tamura
-          <br />
-          kyoto-design＆technology　college
-          <br />
-          Im japanese
-        </li>
-      </ul>
-
-      <ul className={styles.detailsist}>
-        <li className={styles.details}>
-          田村優典
-          <br />
-          京都デザインアンドテクノロジー専門学校在籍
-          <br />
-          日本人
-        </li>
-
-        <li className={styles.details}>
-          Yusuke Tamura
-          <br />
-          kyoto-design＆technology　college
-          <br />
-          Im japanese
-        </li>
-      </ul>
+      
     </>
   );
 }

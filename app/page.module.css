@@ -1,7 +1,4 @@
 /* 背景画像を固定 */
-
-
-
 .bgimg {
   position: fixed; /* 背景画像を画面に固定 */
   top: 0;
@@ -22,50 +19,66 @@
   background-color: rgba(0, 0, 0, 0.5); /* 背景に透明度を追加 */
   color: #fff;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 120px 0;
   z-index: 1; /* コンテンツが背景の上に表示されるように */
+  text-align: center; /* 中央揃え */
 }
 
 .title {
-  color: #fff;
-  margin-top: 3rem;
   font-size: 3rem;
   font-weight: bold;
-  text-align: center;
+
   margin-bottom: 1rem;
 }
 
 .description {
+  font-size: 1.5rem;
+}
+
+/* .profile セクション */
+.profileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 横中央揃え */
+  gap: 20px;
+  text-align: center; /* テキスト中央揃え */
+  padding: 40px 0;
+  flex-direction: row-reverse; /* 画像とテキストを逆に配置 */
+}
+
+.profileImage {
+  width: 420px; /* 画像のサイズ */
+  height: 420px; /* 高さも指定して正方形に */
+  object-fit: cover;
+  border-radius: 50%; /* 画像を円形に */
+  margin-top: 3rem;
+}
+
+.profileText .title {
+  font-size: 2rem;
   color: #fff;
-  text-align: center;
+}
+
+.profileText .description {
+  font-size: 1rem;
+  color: #fff;
 }
 
 /* .details セクション */
 .details {
   text-align: center;
   color: #fff;
-  padding: 100px 0; /* セクションに上下のパディングを追加 */
+  padding: 100px 0;
 }
 
 .detailsist {
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: 50px; /* スペースを調整 */
 }
 
 .detailsist > * {
   position: relative;
-}
-
-.detailsist > *:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 100%;
-  background-color: #333;
 }
 
 /* .news セクション */
@@ -121,5 +134,25 @@
     right: auto;
     bottom: auto;
     margin-top: 16px;
+  }
+
+  /* .profile セクション */
+  .profileContainer {
+    flex-direction: column; /* スマホサイズでは縦並びに変更 */
+    padding: 20px 0;
+  }
+
+  .profileImage {
+    width: 100px; /* 小さく調整 */
+    height: 100px; /* 高さも調整 */
+    margin-bottom: 20px;
+  }
+
+  .profileText .title {
+    font-size: 1.8rem;
+  }
+
+  .profileText .description {
+    font-size: 0.9rem;
   }
 }

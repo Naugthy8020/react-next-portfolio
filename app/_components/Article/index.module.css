@@ -1,7 +1,8 @@
 .title {
   font-size: 2.4rem;
   margin-bottom: 24px;
-  text-align: left;
+  text-align: center;
+
 }
 
 .description {
@@ -25,7 +26,7 @@
 }
 
 .thumbnail {
-  width: 100%;
+  width: 40%;
   height: auto;
   margin-bottom: 64px;
 }
