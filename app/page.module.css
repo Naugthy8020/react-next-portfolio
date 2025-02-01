@@ -60,7 +60,7 @@
 }
 
 .profileText .description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -103,6 +103,7 @@
 
 /* メディアクエリ: 640px 以下の画面幅対応 */
 @media (max-width: 640px) {
+  
   .top {
     padding: 120px 16px;
   }
@@ -119,7 +120,7 @@
 
   .bgimg {
     width: 100%;
-    height: 400px;
+   
     object-fit: cover;
     object-position: center center;
   }

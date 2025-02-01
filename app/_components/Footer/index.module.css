@@ -15,15 +15,32 @@
   justify-content: center;
   gap: 40px;
   font-size: 1rem;
-  white-space: nowrap;
+  /* white-space: nowrap; を削除 */
 }
 
+.item {
+  /* デフォルトではアイテムを中央に配置 */
+  display: flex;
+  justify-content: center;
+}
+
+/* スマホ用メディアクエリ */
 @media (max-width: 640px) {
   .items {
+    /* 画面幅が狭い場合、アイテムを縦に並べる */
     flex-wrap: wrap;
-    gap: 8px 0;
+    gap: 16px 0; /* 横の隙間は16px、縦は0 */
   }
+
   .item {
-    width: 50%;
+    /* スマホのときはアイテムの幅を100%にする */
+    width: 100%; /* これでアイテムが縦に並びます */
+    text-align: center; /* アイテム内のテキストを中央揃え */
   }
+  .footer {
+    padding: 12px 16px; /* パディングを調整 */
+    font-size: 0.7rem; /* フォントサイズを調整 */
+    margin-top: 60px;  /* マージンも調整 */
+  }
+  
 }

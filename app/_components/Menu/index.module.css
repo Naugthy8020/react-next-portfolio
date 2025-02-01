@@ -1,3 +1,4 @@
+/* メニューの基本スタイル */
 .items {
   display: flex;
   color: #fff;
@@ -9,10 +10,12 @@
 }
 
 @media (max-width: 640px) {
+  /* メニューの全体的なスタイル */
   .nav {
     display: none;
   }
 
+  /* メニューが開いているとき */
   .nav.open {
     display: block;
     position: fixed;
@@ -20,26 +23,64 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-bg-painted);
-    color: var(--color-text-unpainted);
+    background-color: var(--color-bg-painted); /* 背景色 */
+    color: var(--color-text-unpainted); /* テキストカラー */
     padding: 24px 16px;
+    z-index: 9999; /* 他の要素の上に表示されるように */
+    transform: translateX(100%); /* 初期状態は右に隠れている */
+    transition: transform 0.3s ease-in-out; /* スライドインアニメーション */
   }
 
+  /* メニューが開いた状態 */
+  .nav.open {
+    transform: translateX(0); /* メニューを右からスライドイン */
+  }
+
+  /* アイテムのスタイル調整 */
   .items {
-    flex-direction: column;
+    flex-direction: column; /* アイテムを縦に並べる */
     gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* メニューが開いたときの余白 */
   }
 
+  /* メニューアイテムのリンクスタイル */
+  .items li a {
+    color: var(--color-text-unpainted); /* メニューアイテムの文字色 */
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* ホバー時の色変更 */
+  }
+
+  /* メニューアイテムにホバー時の効果 */
+  .items li a:hover {
+    color: var(--color-primary); /* ホバー時に色が変わる */
+  }
+
+  /* ハンバーガーメニューアイコン */
   .button {
     display: flex;
     background: none;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* 右上に固定 */
+    z-index: 10000; /* ハンバーガーメニューが他の要素より上に表示される */
   }
 
+  /* 閉じるボタンの位置調整 */
   .close {
     position: absolute;
     top: 24px;
-    right: 16px;
+    right: 16px; /* 閉じるボタンを右上に配置 */
+    z-index: 10001; /* 閉じるボタンを最前面に */
+  }
+
+  /* 閉じるボタンのスタイル */
+  .close img {
+    width: 24px;
+    height: 24px;
   }
 }

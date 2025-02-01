@@ -11,21 +11,30 @@ export default function Menu() {
   const open = () => setOpen(true);
   const close = () => setOpen(false);
 
+  // メニューリンクがクリックされた時にメニューを閉じる
+  const handleLinkClick = () => {
+    close();
+  };
+
   return (
     <div>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           <li>
-            <Link href="/blog">制作物</Link>
+            <Link href="/blog" onClick={handleLinkClick}>制作物</Link>
           </li>
           <li>
-            <Link href="/skills">スキル</Link>
+            <Link href="/skills" onClick={handleLinkClick}>スキル</Link>
           </li>
           <li>
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="/contact" onClick={handleLinkClick}>お問い合わせ</Link>
           </li>
         </ul>
-        <button className={cx(styles.button, styles.close)} onClick={close}>
+        {/* 閉じるボタン */}
+        <button
+          className={cx(styles.button, styles.close)}
+          onClick={close}
+        >
           <Image
             src="/close.svg"
             alt="閉じる"
@@ -35,9 +44,18 @@ export default function Menu() {
           />
         </button>
       </nav>
-      <button className={styles.button} onClick={open}>
-        <Image src="/menu.svg" alt="メニュー" width={24} height={24} />
-      </button>
+      
+      {/* ハンバーガーメニューアイコン（右上） */}
+      {!isOpen && (
+        <button className={styles.button} onClick={open}>
+          <Image
+            src="/menu.svg"
+            alt="メニュー"
+            width={24}
+            height={24}
+          />
+        </button>
+      )}
     </div>
   );
 }
