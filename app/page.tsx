@@ -30,16 +30,13 @@ export default async function Home() {
   <div className={styles.profileText}>
     <h1 className={styles.title}>田村　優典</h1>
     <p className={styles.description}>
-      私は京都デザイン＆テクノロジー専門学校に在学している学生です。
-      <br />学年１年生です。
-      <br />専攻スーパーITエンジニア専攻です。
-      <br />
-      Yusuke Tamura
-      <br />
-      kyoto-design＆technology　college
-      <br />
-      Im japanese
-    </p>
+  京都の専門学校に在学中の学生です。  
+  <br />Webフルスタック開発を学んでいます。  
+  <br />Yusuke Tamura  
+  <br />I'm a student at a technical college in Kyoto.  
+  <br />I'm Japanese.
+</p>
+
   </div>
 </div>
 
